@@ -7,12 +7,17 @@ from langchain.vectorstores import FAISS
 from langchain.chains.question_answering import load_qa_chain
 from langchain.llms import OpenAI
 import os
+from decouple import config
+
+# Read the API key from the .env file
+OPENAI_API_KEY = config('OPENAI_API_KEY')
+
 
 app = Flask(__name__)
 CORS(app)
 
 # Use environment variables for API keys
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] = OPENAI_API_KEY
 
 # Make PDF file path configurable
 PDF_FILE_PATH = './myresume.pdf'

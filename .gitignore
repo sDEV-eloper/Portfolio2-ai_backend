@@ -1,1 +1,4 @@
-myvenv
+venv
+main.py
+server.py
+.env

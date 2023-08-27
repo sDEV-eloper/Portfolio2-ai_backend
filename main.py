@@ -5,7 +5,7 @@ from langchain.vectorstores import FAISS
 from langchain.chains.question_answering import load_qa_chain
 from langchain.llms import OpenAI
 import os
-os.environ["OPENAI_API_KEY"]="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"
+os.environ["OPENAI_API_KEY"]=""
 pdfreader=PdfReader('./myresume.pdf')
 from typing_extensions import Concatenate
 raw_text=''
